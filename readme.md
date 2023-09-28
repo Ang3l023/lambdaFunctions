@@ -41,13 +41,13 @@ Para desplegar el proyecto en AWS ejecutar:
 Clona el repositorio
 
 ```bash
-  git clone https://link-to-project
+  git clone https://github.com/Ang3l023/lambdaFunctions.git
 ```
 
 Ve al directorio del proyecto
 
 ```bash
-  cd my-project
+  cd lambdaFunctions
 ```
 
 Instala las dependencias
