@@ -1,0 +1,38 @@
+{
+    "name": "backendts",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "dev": "sls offline -s dev",
+        "build": "npx tsc",
+        "test": "jest -c e2e/jest.config.js --runInBand --bail e2e"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@types/aws-lambda": "^8.10.122",
+        "@types/crypto-js": "^4.1.2",
+        "@types/jest": "^29.5.5",
+        "@types/jsonwebtoken": "^9.0.3",
+        "@types/serverless": "^3.12.16",
+        "aws-lambda": "^1.0.7",
+        "axios": "^1.5.1",
+        "dotenv": "^16.3.1",
+        "jest": "^29.7.0",
+        "serverless": "^3.35.2",
+        "serverless-jest-plugin": "^0.4.0",
+        "serverless-offline": "^13.1.1",
+        "serverless-plugin-typescript": "^2.1.5",
+        "ts-jest": "^29.1.1",
+        "typescript": "^5.2.2"
+    },
+    "dependencies": {
+        "crypto-js": "^4.1.1",
+        "jsonwebtoken": "^9.0.2",
+        "nodemon": "^3.0.1",
+        "redis": "^4.6.10",
+        "ts-node": "^10.9.1"
+    }
+}

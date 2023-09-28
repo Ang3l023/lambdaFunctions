@@ -1,0 +1,33 @@
+service: serverlessSetup
+
+provider:
+    name: aws
+    runtime: nodejs18.x
+    region: us-west-1
+    environment:
+        privateKey: secretkeylambda
+        REDIS_URL: redis://default:DqbI8eJXZkFrzXJzOsjq0LQznpDEJzSd@redis-19371.c9.us-east-1-4.ec2.cloud.redislabs.com:19371
+
+# functions
+functions:
+    token:
+        handler: src/functions/token.handler
+        events: # The events that trigger this function
+            - http:
+                  path: v2/token
+                  method: post
+    creditcard:
+        handler: src/functions/creditcard.handler
+        events:
+            - http:
+                  path: v2/creditcard
+                  method: get
+
+# Serverless plugins
+plugins:
+    - serverless-plugin-typescript
+    - serverless-offline
+    - serverless-jest-plugin
+
+custom:
+    jest:
